@@ -1,10 +1,6 @@
-.switcher > .container--profile {
-  align-self: flex-start;
-}
-
 .container--profile {
-  --p-inline: 1.5rem;
-  --p-block: 1.5rem;
+  --p-inline: 2rem;
+  --p-block: 2rem;
   background-color: var(--blue-500);
   overflow: hidden;
   min-width: 16rem;
@@ -22,7 +18,7 @@
 }
 
 .user-card img {
-  --size: 70px;
+  --size: 100px;
   width: var(--size);
   height: var(--size);
   order: -1;
@@ -42,7 +38,7 @@
 
 .container--profile ul {
   padding-block: var(--p-block);
-  padding-block-start: 0.5rem;
+  /* padding-block-start: 0.5rem; */
   padding-inline: var(--p-inline);
 }
 

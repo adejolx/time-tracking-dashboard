@@ -131,6 +131,11 @@ h2 {
   font-weight: var(--fw-100);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* Utility classes
 --------------------- */
 .container {
@@ -155,6 +160,10 @@ h2 {
 
 .text\:sm {
   font-size: 0.875rem;
+}
+
+.text\:md {
+  font-size: var(--fs-base);
 }
 
 .text\:lg {
@@ -185,7 +194,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  --threshold: 30rem;
+  --threshold: 27rem;
+  align-items: center;
 }
 
 .switcher > * {
@@ -198,7 +208,7 @@ h2 {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(
-    auto-fill,
+    auto-fit,
     minmax(min(var(--minimum), 100%), 1fr)
   );
 }

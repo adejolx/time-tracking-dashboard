@@ -8,7 +8,9 @@ import { TrackerData } from "./utils/@types/custom";
 function App() {
   const localDataSource = "data.json";
   const { data, error, loading } = useFetch({ localDataSource });
-  const [timeframe, setTimeframe] = useState("");
+  const [timeframe, setTimeframe] = useState<"daily" | "weekly" | "monthly">(
+    "daily"
+  );
 
   const handleClick = (e: React.MouseEvent<HTMLInputElement>) => {
     switch (e.currentTarget.value) {
@@ -36,6 +38,7 @@ function App() {
           data={data as TrackerData[]}
           loading={loading}
           error={error}
+          state={timeframe}
         />
       </div>
     </main>
