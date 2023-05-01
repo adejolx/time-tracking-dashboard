@@ -3,6 +3,8 @@
 }
 
 .container--profile {
+  --p-inline: 1.5rem;
+  --p-block: 1.5rem;
   background-color: var(--blue-500);
   overflow: hidden;
   min-width: 16rem;
@@ -14,8 +16,8 @@
   flex-direction: column;
   gap: var(--gap);
   background-color: var(--blue-400);
-  padding-inline: 1.5rem;
-  padding-block: 1.5rem;
+  padding-inline: var(--p-inline);
+  padding-block: var(--p-block);
   padding-block-end: 5rem;
 }
 
@@ -38,8 +40,10 @@
   width: min-content;
 }
 
-.container--profile > ul {
-  padding-block: 1rem;
+.container--profile ul {
+  padding-block: var(--p-block);
+  padding-block-start: 0.5rem;
+  padding-inline: var(--p-inline);
 }
 
 .container--profile input[type="button"] {

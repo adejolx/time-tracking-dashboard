@@ -22,7 +22,7 @@ function App() {
         setTimeframe("monthly");
         break;
       default:
-        setTimeframe("daily");
+        throw new Error("Invalid timeframe");
     }
   };
 
