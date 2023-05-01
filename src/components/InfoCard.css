@@ -1,0 +1,29 @@
+.container--info {
+  padding-block-start: 3rem;
+  background-color: var(--c-work);
+  background-image: url("../assets/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+  min-width: 16rem;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--blue-500);
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+}
+
+.info-card .header {
+  order: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-card p {
+  color: var(--blue-100);
+}

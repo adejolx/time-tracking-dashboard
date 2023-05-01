@@ -1,0 +1,60 @@
+.switcher > .container--profile {
+  align-self: flex-start;
+}
+
+.container--profile {
+  background-color: var(--blue-500);
+  overflow: hidden;
+  min-width: 16rem;
+}
+
+.user-card {
+  --gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  background-color: var(--blue-400);
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+  padding-block-end: 5rem;
+}
+
+.user-card img {
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  order: -1;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.user-card h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-card .username {
+  width: min-content;
+}
+
+.container--profile > ul {
+  padding-block: 1rem;
+}
+
+.container--profile input[type="button"] {
+  border: 2px solid transparent;
+  background-color: transparent;
+  outline: 2px solid transparent;
+  color: var(--blue-100);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.container--profile input[type="button"]:focus,
+.container--profile input[type="button"]:hover {
+  color: white;
+}
+
+.container--profile input[type="button"]:focus {
+  border: 2px solid white;
+}

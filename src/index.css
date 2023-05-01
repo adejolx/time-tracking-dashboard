@@ -1,0 +1,202 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --fw-100: 300;
+  --fw-200: 400;
+  --fw-300: 500;
+  --fs-base: 1.125rem;
+  --ff-primary: "Rubik", sans-serif;
+
+  --blue-100: hsl(236, 100%, 87%);
+  --blue-200: hsl(195, 74%, 62%);
+  --blue-300: hsl(235, 45%, 61%);
+  --blue-400: hsl(246, 80%, 60%);
+  --blue-500: hsl(235, 46%, 20%);
+  --blue-600: hsl(226, 43%, 10%);
+
+  --red-100: hsl(15, 100%, 70%);
+  --red-200: hsl(348, 100%, 68%);
+
+  --orange-100: hsl(43, 84%, 65%);
+  --green-100: hsl(145, 58%, 55%);
+  --violet-100: hsl(264, 64%, 52%);
+
+  /* Keys --> c: color, g: global */
+  --c-work: var(--red-100);
+  --c-play: var(--blue-200);
+  --c-study: var(--red-200);
+  --c-exercise: var(--green-100);
+  --c-social: var(--violet-100);
+  --c-self-care: var(--orange-100);
+
+  --background-color: var(--blue-600);
+  --g-text-color: white;
+
+  --w-mobile: 375px;
+  --w-desktop: 1440px;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-100);
+  color: var(--g-text-color);
+  background-color: var(--background-color);
+  position: relative;
+}
+
+h2 {
+  line-height: 1.2;
+  font-weight: var(--fw-100);
+}
+
+/* Utility classes
+--------------------- */
+.container {
+  --p-inline: 2rem;
+  --p-block: 2rem;
+  width: min(100%, var(--w-desktop));
+  padding-inline: var(--p-inline);
+  padding-block: var(--p-block);
+  margin-inline: auto;
+  height: min(100%, 50rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text\:sm {
+  font-size: 0.875rem;
+}
+
+.text\:lg {
+  font-size: 2.25rem;
+}
+
+.text\:xl {
+  font-size: 3rem;
+}
+
+.unbold {
+  font-weight: var(--fw-100);
+}
+
+.bold-300 {
+  font-weight: var(--fw-300);
+}
+
+.rounded-md {
+  border-radius: 0.75rem;
+}
+
+.stack-md > * + * {
+  margin-block-start: 0.75rem;
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  --threshold: 30rem;
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+.grid {
+  --minimum: 16rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(var(--minimum), 100%), 1fr)
+  );
+}
