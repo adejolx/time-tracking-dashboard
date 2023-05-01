@@ -38,7 +38,6 @@
 
 .container--profile ul {
   padding-block: var(--p-block);
-  /* padding-block-start: 0.5rem; */
   padding-inline: var(--p-inline);
 }
 
@@ -48,6 +47,7 @@
   outline: 2px solid transparent;
   color: var(--blue-100);
   text-transform: capitalize;
+  text-decoration: underline dotted;
   cursor: pointer;
 }
 .container--profile input[type="button"]:focus,
