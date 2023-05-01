@@ -27,7 +27,7 @@ const CardGrid = ({ data, error, loading, state }: Props<TrackerData[]>) => {
     { url: selfCareIcon, bgColor: "var(--c-self-care)" },
   ];
   return (
-    <ul role="list" className="container--grid grid">
+    <ul className="container--grid grid">
       {error ? (
         error
       ) : loading ? (

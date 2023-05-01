@@ -22,7 +22,7 @@ const InfoCard = ({ state, datum, bgStyles }: Props<TrackerData>) => {
           <h2 className="bold-300 text:md">{datum?.title}</h2>
           <p className="text:xl hours">
             {datum?.timeframes[state].current}
-            {datum?.timeframes[state].current > 1 ? "hrs" : "hr"}
+            {datum?.timeframes[state].current != 1 ? "hrs" : "hr"}
           </p>
           <p className="text:sm timeframe">
             {`${
@@ -33,11 +33,11 @@ const InfoCard = ({ state, datum, bgStyles }: Props<TrackerData>) => {
                 : "Yesterday"
             } - `}
             {datum?.timeframes[state].previous}
-            {datum?.timeframes[state].previous > 1 ? "hrs" : "hr"}
+            {datum?.timeframes[state].previous != 1 ? "hrs" : "hr"}
           </p>
         </div>
         <div className="side-bar">
-          <button>
+          <button role="presentation" tabIndex={-1}>
             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"

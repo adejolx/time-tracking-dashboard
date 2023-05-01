@@ -15,7 +15,7 @@ const ProfileCard = ({ onClick }: Props) => {
         </h2>
         <img src={avatar} alt="" />
       </article>
-      <ul role="list" className="stack-md">
+      <ul className="stack-md">
         <li>
           <input type="button" value={"daily"} onClick={onClick} />
         </li>
