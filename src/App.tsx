@@ -32,7 +32,11 @@ function App() {
     <main className="container">
       <h1 className="sr-only">Time Tracking Dashboard</h1>
       <div className="switcher">
-        <ProfileCard onClick={handleClick} data={data as TrackerData[]} />
+        <ProfileCard
+          onClick={handleClick}
+          data={data as TrackerData[]}
+          currentState={timeframe}
+        />
         <CardGrid
           data={data as TrackerData[]}
           loading={loading}
