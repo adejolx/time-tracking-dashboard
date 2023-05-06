@@ -50,9 +50,14 @@
   text-decoration: underline dotted;
   cursor: pointer;
 }
-.container--profile input[type="button"]:focus,
-.container--profile input[type="button"]:hover {
+.container--profile input[type="button"]:focus {
   color: white;
+}
+
+@media (hover: hover) {
+  .container--profile input[type="button"]:hover {
+    color: white;
+  }
 }
 
 .container--profile input[type="button"]:focus {

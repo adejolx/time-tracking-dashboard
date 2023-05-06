@@ -18,8 +18,10 @@
   transition: background-color 150ms ease-in-out;
 }
 
-.info-card:hover {
-  background-color: hsl(235, 45%, 40%);
+@media (hover: hover) {
+  .info-card:hover {
+    background-color: hsl(235, 45%, 40%);
+  }
 }
 
 .info-card .timeframe {
@@ -38,6 +40,8 @@
   transition: fill 150ms ease-in-out;
 }
 
-.container--info button:hover svg path {
-  fill: white;
+@media (hover: hover) {
+  .container--info button:hover svg path {
+    fill: white;
+  }
 }
