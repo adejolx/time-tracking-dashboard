@@ -28,12 +28,11 @@ function App() {
     }
   };
 
-  console.log(timeframe);
   return (
     <main className="container">
       <h1 className="sr-only">Time Tracking Dashboard</h1>
       <div className="switcher">
-        <ProfileCard onClick={handleClick} />
+        <ProfileCard onClick={handleClick} data={data as TrackerData[]} />
         <CardGrid
           data={data as TrackerData[]}
           loading={loading}
